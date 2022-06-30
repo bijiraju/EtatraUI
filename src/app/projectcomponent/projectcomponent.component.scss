@@ -1,0 +1,48 @@
+
+thead
+{
+    background-color: rgba(149, 151, 156, 0.863);
+    border-color: #000;
+    border: 2em;
+}
+.projectlistbody{
+    background-color: rgba(199, 212, 244, 0.863);
+    border-color: #000;
+    border: 2em;
+}
+.card
+{
+    margin-left: 120px;
+    margin-top: 20px;
+   // display: flex;
+   // flex-direction:row;
+    width:80%;
+    height: 300px;
+    align-content:center;
+    background-color:rgb(232, 239, 241);
+    border: 5em;
+    
+     
+}
+.card-header
+{
+    text-align-last: center ;
+    font-size: larger;
+    font-weight: 500;
+    background-color:rgb(12, 12, 12);
+    color:white;
+}
+
+.btn
+{
+    color:white;
+    background-color:rgb(79, 105, 153);
+    margin-left: 900px;
+
+}
+.tbody
+{
+    background-color:aliceblue;
+}
+
+

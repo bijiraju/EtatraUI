@@ -1,0 +1,32 @@
+mat-grid-tile {
+  background: lightblue;
+}
+mat-list-option { 
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 25px;
+}
+.taskbutton{
+  
+    padding: 6px 6px 6px 6px;
+    margin: 6px 8px 6px 8px;
+    
+    width: 200px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    background-color: rgba(35, 105, 151, 0.916);
+
+}
+.taskbutton:hover {
+  background-color:  rgba(1, 45, 50, 0.616);
+  color: white;
+}
+.centered-container{
+  margin-top: 25px;
+
+}

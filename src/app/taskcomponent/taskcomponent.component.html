@@ -1,0 +1,39 @@
+<app-headercomponent></app-headercomponent>
+<div class="taskBox">
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="openNewTaskDialog()">Add New Task</button>
+    <!-- <button mat-raised-button color="primary" (click)="editTaskDialog()">Edit Task</button> -->
+  </div>
+    <mat-accordion *ngIf="tasks.length">
+        <mat-expansion-panel *ngFor="let task of tasks; index as i" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ task.module }}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ task.task }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>{{ task.allottedtime }}</p>
+          <p>{{ task.createddate }}</p>
+          <p>{{ task.status }}</p>
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" (click)="editTaskDialog(task)">Edit</button>
+            <button mat-raised-button color="warn" (click)="onDeleteTask(task)" >Delete</button>
+          </div>
+        </mat-expansion-panel>
+        <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel> -->
+      </mat-accordion>
+      
+</div>

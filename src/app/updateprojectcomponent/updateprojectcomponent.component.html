@@ -1,0 +1,61 @@
+<app-headercomponent></app-headercomponent>
+<div class='card'>
+    <form (ngSubmit)="editProject()">
+      <div class='card-header'>
+       
+      </div>
+      <div class='card-body'>
+        <div class='table-responsive'>
+          <table class='table'>
+            <tbody>
+              <tr>
+                <td> <label>Project Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="projectItem.projectname"/></td>
+              </tr>
+              <tr>
+                <td><label>Client Name</label></td>
+                <td><input type="text" name="p_cname" [(ngModel)]="projectItem.clientname" /></td>
+              </tr>
+              <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" name="p_email"[(ngModel)]="projectItem.email"  /></td>
+              </tr>
+              <tr>
+                <td><label>Country</label></td>
+                <td><input type="text" name="p_country" [(ngModel)]="projectItem.country" /></td>
+              </tr>
+              <tr>
+                <td><label>State</label></td>
+                <td><input type="text" name="p_state" [(ngModel)]="projectItem.state"/></td>
+              </tr>
+              <tr>
+                <td> <label>Zipcode</label></td>
+                <td><input type="text" name="p_zip" [(ngModel)]="projectItem.zipcode" /></td>
+              </tr>
+              <tr>
+                <td> <label>Phone</label></td>
+                <td><input type="text" name="p_phone"[(ngModel)]="projectItem.phone"/></td>
+              </tr>
+              <tr>
+                <td><label>Start Date</label></td>
+                <td><input type="text" name="p_start"[(ngModel)]="projectItem.startdate"/></td>
+              </tr>
+              <tr>
+                <td><label>End Date</label></td>
+                <td><input type="text" name="p_end" [(ngModel)]="projectItem.enddate"/></td>
+              </tr>
+              <tr>
+                <td><label>Duration</label></td>
+                <td><input type="text" name="p_duration" [(ngModel)]="projectItem.duration"/></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
+  

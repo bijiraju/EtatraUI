@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                <!-- <div class="card-img-left d-none d-md-flex"> -->
+                <!-- Background image for card set in CSS! -->
+                <!-- </div> -->
+                <div class="card-body p-4 p-sm-5">
+                    <h3 class="card-title text-center mb-5 fw-light"><b>Sign Up</b></h3>
+
+
+                    <form [formGroup]="signupForm" (ngSubmit)="editUser()">
+
+                        <div class="row g-2 mb-3">
+                            <!-- <div class="form-floating mb-3"> -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" [(ngModel)]="adminedit.firstname"
+                                        id="floatingInputFirstName" placeholder="myfirstname"
+                                        formControlName="firstname"
+                                        [class.is-invalid]="f['firstname'].getError('required')!=null && f['firstname'].touched">
+                                    <label for="floatingInputFirstName">First Name</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['firstname'].getError('required')!=null && f['firstname'].touched">*Required</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-floating mb-3"> -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" [(ngModel)]="adminedit.lastname"
+                                        id="floatingInputLastName" placeholder="mylastname" formControlName="lastname"
+                                        [class.is-invalid]="f['lastname'].getError('required')!=null && f['lastname'].touched">
+                                    <label for="floatingInputLastName">Last Name</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['lastname'].getError('required')!=null && f['lastname'].touched">*Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" [(ngModel)]="adminedit.email"
+                                        id="floatingInputEmail" placeholder="name@example.com" formControlName="email"
+                                        [class.is-invalid]="f['email'].getError('required')!=null && f['email'].touched || f['email'].getError('pattern')!=null">
+                                    <label for="floatingInputEmail">Email address</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['email'].getError('required')!=null && f['email'].touched">*Required</span>
+                                    <span class="text-danger" *ngIf="f['email'].getError('pattern')!=null">Email format
+                                        invalid!</span>
+                                </div>
+                            </div>
+                            <!-- <hr> -->
+
+
+                            <!-- <div class="form-floating mb-3"> -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" [(ngModel)]="adminedit.mobilenumber"
+                                        id="floatingInputMobileNumber" placeholder="mymobilenumber"
+                                        formControlName="mobilenumber"
+                                        [class.is-invalid]="f['mobilenumber'].getError('required')!=null && f['mobilenumber'].touched || f['mobilenumber'].getError('pattern')!=null">
+                                    <label for="floatingInputMobileNumber">Mobile Number</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['mobilenumber'].getError('required')!=null && f['mobilenumber'].touched">*Required</span>
+                                    <span class="text-danger" *ngIf="f['mobilenumber'].getError('pattern')!=null">*Must
+                                        be 10 digits only</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <!-- <div class="form-floating mb-3"> -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" [(ngModel)]="adminedit.dob"
+                                        id="floatingInputDOB" placeholder="myDOB" formControlName="dob"
+                                        [class.is-invalid]="f['dob'].getError('required')!=null && f['dob'].touched">
+                                    <label for="floatingInputDOB">Date of Birth</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['dob'].getError('required')!=null && f['dob'].touched">*Required</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" [(ngModel)]="adminedit.roleId"
+                                        id="floatingInputMobileNumber" placeholder="rolId" formControlName="roleId"
+                                        [class.is-invalid]="f['roleId'].getError('required')!=null && f['roleId'].touched || f['roleId'].getError('pattern')!=null">
+                                    <label for="floatingInputroleId">Role Id</label>
+                                    <span class="text-danger"
+                                        *ngIf="f['roleId'].getError('required')!=null && f['roleId'].touched">*Required</span>
+                                    <span class="text-danger" *ngIf="f['roleId'].getError('pattern')!=null">*Must
+                                        be 1, 2 or 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-floating mb-3">
+                            <input type="password" class="form-control" [(ngModel)]="password" id="floatingPassword"
+                                placeholder="Password" formControlName="password" [class.is-invalid]="f['password'].getError('required')!=null &&
+                f['password'].touched || f['password'].getError('minlength')!=null">
+                            <label for="floatingPassword">Password</label>
+                            <span class="text-danger"
+                                *ngIf="f['password'].getError('required')!=null && f['password'].touched">*Required</span>
+                            <span class="text-danger" *ngIf="f['password'].getError('minlength')!=null">*Password should
+                                minimum 8
+                                characters </span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPasswordConfirm"
+                                placeholder="Confirm Password" formControlName="confirmPassword" [class.is-invalid]="f['confirmPassword'].getError('required')!=null &&
+                f['confirmPassword'].touched || f['confirmPassword'].getError('MustMatch')!=null">
+                            <label for="floatingPasswordConfirm">Confirm Password</label>
+                            <span class="text-danger"
+                                *ngIf="f['confirmPassword'].getError('required')!=null && f['confirmPassword'].touched">*Required</span>
+                            <span class="text-danger" *ngIf="f['confirmPassword'].getError('MustMatch')!=null">*Password
+                                Mismatched!</span>
+
+                        </div> -->
+
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit"
+                                [disabled]="signupForm.invalid">Save the Changes</button>
+                        </div>
+
+
+
+                        <!-- <hr class="my-4"> -->
+
+                        <!-- <div class="d-grid mb-2">
+              <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-google me-2"></i> Sign up with Google
+              </button>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
+              </button>
+            </div> -->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

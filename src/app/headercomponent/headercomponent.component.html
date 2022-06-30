@@ -1,0 +1,129 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <!-- <a href="#" class="navbar-brand"><i class="fa fa-cube"></i><b>ETaTrA</b></a> -->
+  <img src="../../assets/Images/ETaTrA Logo 1.png" width="" height="45" class="d-inline-block align-text-top"
+    style="padding-left: 5px;">
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collection of nav links, forms, and other content for toggling -->
+  <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['']" routerLinkActive="active">Home</a>
+      <!-- <mat-icon>create</mat-icon> -->
+      <!-- <mat-icon>add_box</mat-icon> -->
+      <!-- <a class="nav-item nav-link" routerLink="signup" routerLinkActive="active">Sign Up</a>
+
+      <a class="nav-item nav-link" routerLink="login" routerLinkActive="active">Log In</a> -->
+
+      <a class="nav-item nav-link" *ngIf="roleId!==3" [routerLink]="['/users']" routerLinkActive="active">Users</a>
+
+      <a class="nav-item nav-link" *ngIf="roleId!==3" [routerLink]="['/projects']"
+        routerLinkActive="active">Projects</a>
+
+      <a class="nav-item nav-link" *ngIf="roleId!==3" [routerLink]="['/tasks']" routerLinkActive="active">Tasks</a>
+      <a class="nav-item nav-link" *ngIf="roleId===1" [routerLink]="['/admins']" routerLinkActive="active">Admins</a>
+
+      <a class="nav-item nav-link" *ngIf="roleId!==3" [routerLink]="['/asstasks']" routerLinkActive="active">Assign
+        Tasks</a>
+
+
+
+      <!--! For dropdown list start-->
+      <!-- <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">Web Design</a>
+          <a href="#" class="dropdown-item">Web Development</a>
+          <a href="#" class="dropdown-item">Graphic Design</a>
+          <a href="#" class="dropdown-item">Digital Marketing</a>
+        </div>
+      </div> -->
+      <!--! For dropdown list ends-->
+
+
+    </div>
+
+    <!--! For search section start-->
+    <!-- <form class="navbar-form form-inline">
+      <div class="input-group search-box">
+        <input type="text" id="search" class="form-control" placeholder="Search by Name">
+        <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+      </div>
+    </form> -->
+    <!--! For search section ends-->
+
+
+    <div class="navbar-nav ml-auto">
+     
+      <div class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img
+            src="../../assets/Images/user-avatar.png" class="avatar" alt="Avatar"> User <b class="caret"></b></a>
+        <div class="dropdown-menu">
+        
+          <div class="dropdown-divider"></div>
+          <a routerLink="/login" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!-- <div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+          <img src="../../assets/Images/ETaTrA Logo 1.png" width="" height="45" class="d-inline-block align-text-top"
+            style="padding-left: 5px;">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signup" routerLinkActive="active">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="users" routerLinkActive="active">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="users" routerLinkActive="active">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="tasks" routerLinkActive="active">Tasks</a>
+        </li> -->
+<!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+
+<!-- </ul>
+
+    </div>
+  </nav> -->
+<!--/.Navbar-->
+<!-- <a href="">Home</a>
+    <a href="login">Login</a>
+    <a href="signup">Sign up</a> -->
+<!-- </div> -->

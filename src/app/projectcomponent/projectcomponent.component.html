@@ -1,0 +1,64 @@
+
+<app-headercomponent></app-headercomponent>
+<div class="card">
+    <div class="card-header">
+        {{title}}
+        </div>
+    <div class="card-body">
+      <div class="table-responsive">
+            <!-- <button class="btn btn-primary"> ADD PROJECT
+              </button> -->
+              <!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> Add</button>    -->
+
+              <button class="btn btn-warning" style="cursor:pointer" 
+              style="margin-left: 900px;" (click)="btnClick();">ADD PROJECT</button>
+             <!-- <button class="btn btn-warning" style="cursor:pointer" 
+              style="margin-left: 30px;" (click)="editProject(project);">EDIT PROJECT</button>
+              <button class="btn btn-warning" style="cursor:pointer" 
+              style="margin-left: 20px;" (click)="deleteProject(project);">DELETE PROJECT</button>
+             -->
+              <br><BR>
+        <table class="table">
+          
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Client Name</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>State</th>
+              <th>Zipcode</th>
+              <th>Phone</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Duration</th>
+              <th></th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr class="projectlistbody" *ngFor='let project of projects'>
+              <td>{{ project.projectname }}</td>
+              <td>{{ project.clientname}}</td>
+              <td>{{ project.email}}</td>
+              <td>{{ project.country}}</td>
+              <td>{{ project.state }}</td>
+              <td>{{ project.zipcode}}</td>
+              <td>{{ project.phone }}</td>
+              <td>{{  project.startdate }}</td>
+              <td>{{  project.enddate }}</td>
+              <td>{{  project.duration }}</td>
+              
+              <td> <button class="btn btn-warning" style="cursor:pointer"  (click)="editProject(project)"style="margin-left:5px;" > Edit</button>
+                <button class="btn btn-danger" style="cursor:pointer" (click)="deleteProject(project)" style="margin-left:5px;"> Delete</button>
+              </td> 
+          </tbody>
+  
+        </table>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  

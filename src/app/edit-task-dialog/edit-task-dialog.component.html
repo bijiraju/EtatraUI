@@ -1,0 +1,42 @@
+<h2 mat-dialog-title> Edit Task </h2>
+<mat-dialog-content>
+    <form #editTaskForm="ngForm">
+        <div class="form-group">
+            <label for="taskNum">Project : </label>          
+              <!-- <select  [(ngModel)]="data.task.projectid" formControlName="project">                               
+                <option *ngFor="let project of projects" [ngValue]="project._id">{{project.projectname}}</option>
+              </select> -->
+              <select [ngModel]="data.task.projectid" (ngModelChange)="data.task.projectid = $event" name="projectid">
+                <option *ngFor="let project of projects" [value]="project._id">{{project.projectname}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="taskTitle">Module : </label>
+            <input id="module" [(ngModel)]="data.task.module" name="module" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="taskDescription">Task : </label>
+            <textarea class="form-group" [(ngModel)]="data.task.task" name="task" id="task" cols="50" rows="5"
+                required></textarea>
+
+        </div>
+        <div class="form-group">
+            <label for="taskTitle">Allotted By : </label>
+            <input id="allottedby" [(ngModel)]="data.task.allottedby" name="allottedby" type="text" class="form-control"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="taskTitle">Allotted Duration : </label>
+            <input id="allottedtime" [(ngModel)]="data.task.allottedtime" name="allottedtime" type="text"
+                class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="taskTitle">Status : </label>
+            <input id="status" [(ngModel)]="data.task.status" name="status" type="text" class="form-control" required>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close [mat-dialog-close]="editTaskForm.value">Save</button>
+    <button mat-raised-button mat-dialog-close [mat-dialog-close]="false">Cancel</button>
+</mat-dialog-actions>

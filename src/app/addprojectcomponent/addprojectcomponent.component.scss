@@ -1,0 +1,40 @@
+.card
+{
+    margin-left: 300px;
+    margin-top: 5px;
+   // display: flex;
+   // flex-direction:row;
+    width: 50%;
+    height: 600px;
+    background-color: hwb(0 94% 5%);
+    border: 15em;
+    text-align:justify;
+    
+    
+     
+}
+.card-header
+{
+    text-align-last: center ;
+    font-size: larger;
+    font-weight: 500;
+    background-color:rgb(143, 95, 95);
+    color:white;
+}
+.table
+{
+    align-content: center;
+    color: rgb(97, 29, 29);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    margin-left: 80px;
+    
+  // background-image: "https://png.pngtree.com/thumb_back/fh260/background/20210814/pngtree-blue-purple-simple-gradient-background-image_760572.jpg";
+}
+.btn
+{
+    color:white;
+    background-color:rgb(79, 105, 153);
+    margin-left: 900px;
+
+}

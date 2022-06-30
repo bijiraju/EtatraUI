@@ -1,0 +1,40 @@
+<app-headercomponent></app-headercomponent>
+<div class="taskBox">
+  <!-- <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="openNewTaskDialog()">Add New Task</button>
+    <button mat-raised-button color="primary" (click)="editTaskDialog()">Edit Task</button>
+  </div> -->
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let admin of admins;index as i" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h5>Admin {{i+1}}:</h5>
+        </mat-panel-title>
+        <mat-panel-description>
+          <h6>{{ admin.firstname }} {{ admin.lastname }}</h6>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Email id: {{ admin.email }}</p>
+      <p>Mobile no.: {{ admin.mobilenumber }}</p>
+      <p>Date od Birth: {{ admin.dob }}</p>
+
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="onEdit(admin)">Edit</button>
+        <button mat-raised-button color="warn" (click)="onDelete(admin)">Delete</button>
+      </div>
+    </mat-expansion-panel>
+    <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel> -->
+  </mat-accordion>
+
+</div>

@@ -1,0 +1,153 @@
+<app-headercomponent></app-headercomponent>
+<div class="centered-container container mx-auto row">
+
+    <div class="project-list col-4 ">
+  
+      <h3 class="ptitle">Projects</h3>
+  
+      <div class="list-group scrollbar" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action colour" *ngFor="let project of projects" id="list-Project-1-list" data-toggle="list"
+          href="#list-Project-1" role="tab" aria-controls="Project-1" (click)="gettasks(project)">{{project.projectname}}</a>       
+      </div>
+  
+    </div>
+  
+    <div class="task-lists col-8">
+  
+      <h3 class="ttitle">Tasks</h3>
+  
+      <div class="tab-content scrollbar" id="nav-tabContent">
+        <div class="tab-pane fade show " id="list-Project-1" role="tabpanel" aria-labelledby="list-Project-1-list">
+  
+          <dl class="row" style="float: none;" *ngFor='let project of finaldata'>           
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>{{project.task}}</dd>
+            <dt class="col-sm-2">Module</dt>
+            <dd class="col-sm-10"><b>: </b>{{project.module}}</dd>
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b>{{project.allottedtime}}</dd>
+            <dt class="col-sm-2">Allotted By</dt>
+            <dd class="col-sm-10"><b>: </b>{{project.allottedby}}</dd>
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b>{{project.allottedtime}}</dd>
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b>{{project.status}}</dd>
+  <hr/>
+          </dl>
+  
+        </div>
+        <div class="tab-pane fade" id="list-Project-2" role="tabpanel" aria-labelledby="list-Project-2-list">
+  
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-2</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+  
+        </div>
+        <div class="tab-pane fade" id="list-Project-3" role="tabpanel" aria-labelledby="list-Project-3-list">
+  
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-3</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+  
+        </div>
+        <div class="tab-pane fade" id="list-Project-4" role="tabpanel" aria-labelledby="list-Project-4-list">
+  
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-4</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+  
+        </div>
+        <div class="tab-pane fade" id="list-Project-5" role="tabpanel" aria-labelledby="list-Project-5-list">
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-5</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+        </div>
+        <div class="tab-pane fade" id="list-Project-6" role="tabpanel" aria-labelledby="list-Project-6-list">
+  
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-6</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+  
+        </div>
+        <div class="tab-pane fade" id="list-Project-7" role="tabpanel" aria-labelledby="list-Project-7-list">
+  
+          <dl class="row" style="float: none;">
+            <dt class="col-sm-2">Project Name </dt>
+            <dd class="col-sm-10"><b>: </b>Project-7</dd>
+  
+            <dt class="col-sm-2">Tasks</dt>
+            <dd class="col-sm-10"><b>: </b>Task 1, Task 2.....</dd>
+  
+            <dt class="col-sm-2">Allotted Time</dt>
+            <dd class="col-sm-10"><b>: </b> date and Time</dd>
+  
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10" style="text-align: justify;"><b>: </b> Not Completed</dd>
+  
+          </dl>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  
+  
+  </div>
+  
